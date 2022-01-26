@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>TEP SOFT LTD</title>
+<style type="text/css">
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap')
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    body{
+        background: gray;
+        min-height: 1000px;
+    }
+    span{
+        color: aquamarine;
+    }
+    
+    footer{
+        background-color: aquamarine;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: dotted;
+    }
+    .banner{
+             position: relative;
+             width: 100%;
+             min-height: 100vh;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             background:url(d1.jpg);
+             background-size: cover;
+    }
+
+    .banner .content{
+        max-width: 900px;
+        text-align: center;
+    }
+    .banner .content h2{
+        font-size: 5rem;
+        color: yellow;
+    }
+    p{
+        font-weight: 300;
+        color:yellow ;
+    }
+    .banner .content p{
+        font-size: 1em;
+        color: orange;
+    }
+    .btn{
+        font-size: 1em;
+        color: aqua;
+        background: darkolivegreen;
+        display: inline-block;
+        padding: 10px 30px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        transition: 0.5s;
+
+    }
+    .btn:hover{
+        letter-spacing: 12px;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 10000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 00.5s;
+        
+
+    }
+    header .sticky{
+        background: #fff;
+        padding: 10px 100px;
+        box-shadow: 0 5px 20px rgba(5, 179, 20, 0.05);
+    }
+    header .logo{
+        color: orange;
+        font-weight: 80;
+        font-size: 3em;
+        text-decoration: none;
+    }
+    header .sticky .logo{
+        color: #fff;
+    }
+    header .logo span{
+        color: green;
+    }
+    header .navigation{
+        position: relative;
+        display: flex;
+    }
+    header .navigation li{
+        list-style: none;
+        margin-left: 90px;
+
+    }
+    header .navigation li a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+    }
+    header.sticky .navigation li a{
+        color: #fff;
+    }
+    header .navigation li a:hover{
+        color: #ff0157;
+    }
+    section{
+        padding: 100px;
+    }
+    .row{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .row.col50{
+        position: relative;
+        width: 48%;
+
+    }
+    .titleText{
+        color: orange;
+        font-size: 3em;
+        font-weight: 300;
+
+    }
+    .titleText span{
+        color: aqua;
+        font-weight: 700;
+        font-size: 2em;
+
+    }
+    .row .col50 .imgBx{
+        position: relative;
+        width: 100%;
+        /*min-height: 300px; */
+        height: 100%;
+    }
+    .row .col50 .imgBx img{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+    .title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+    .services .content{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+    }
+    .services .content .box{
+        width: 340px;
+        margin: 20px;
+        border: 15px saddlebrown;
+        box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+
+
+    }
+    .services .content .box .imgBx{
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+    .services .content .box .imgBx img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+    .services .content .box .text{
+        padding: 15px 0 5px;
+    }
+    .services .content .box .text h3{
+        font-weight: 400;
+        color: #01ff80;
+    }
+    .webpages .content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 40px;
+    }
+    .webpages .content .box{
+        width: 250px;
+        margin: 15px;
+
+    }
+    .webpages .content .box .imgBx{
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+    .webpages .content .box .imgBx img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .webpages .content .box .text{
+        padding: 15px 0 5px;
+    }
+    .webpages .content .box .text h3{
+        font-weight: 400;
+        color: #01ff80;
+    }
+    .say{
+        background: url(k1.jpg);
+        background-size: cover;
+    }
+    .white .titleText,
+    .white p{
+        color: #012e01;
+    }
+    .say .content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 40px;
+
+    }
+    .say .content .box{
+        width: 340px;
+        margin: 20px;
+        padding: 40px;
+        background: #03552c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .say .content .box .imgBx{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .say .content .box .imgBx img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .say .content .box .text{
+        text-align: center;
+    }
+    .say .content .box .text p{
+        color: rgb(237, 248, 16);
+        font-style: italic ;
+    }
+    .say .content .box .text h3{
+        margin-top: 20px;
+        font-size: 1em;
+        font-weight: 800;
+        color: orange;
+    }
+    .contactus 
+    {
+        background: url(k2.jpg);
+        background-size: cover;
+    }
+    .contactForm{
+        padding: 75px 50px;
+        background: url(d3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 15px 50px rgb(0,0,0,0.1);
+        max-width: 500px;
+        margin-top: 50px;
+
+    }
+    .contactForm h3{
+        color: #edcb0b;
+        font-size: 2em;
+        font-style: italic;
+        margin-bottom:20px ;
+        font-weight: 600;
+    }
+    .contactForm .inputBox{
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contactForm .inputBox input{
+        width: 100%;
+        border: 1px salmon;
+        padding: 10px;
+        color: #f2130b;
+        outline: none;
+        font-size: 20px;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+
+    }
+    .contactForm .inputBox input[type="submit"]{
+        font-size: 1em;
+        color: #edcb0b;
+        background:blueviolet ;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        transition: 0.5s;
+        max-width: 100px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+    }
+    .copyrightText{
+        padding: 8px 40px;
+        border-top:1px solid rgba(0,0,0,0.01) ;
+        text-align: center;
+    }
+    .copyrightText p{
+        color: #01ff80;
+    }
+    .copyrightText a{
+        color: gold;
+        font-weight: 600;
+    }
+    @media(max-width:9910x){
+        header,
+        header.sticky{
+            padding: 10px 20px;
+        }
+        header .navigation{
+            display: none;
+        }
+        .menuToggle{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: url(menu.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+    }
+    
+
+
+
+    
+</style>
+
+    </head>
+        <header>
+            <a href="#" class="logo"><span>TEP</span> SOFT</a>
+            <div class="menuToggle">
+
+            </div>
+          <ul class="navigation">
+              <li><a href="#about"><span>A</span>BOUT</a></li>
+              <li><a href="#say"><span>TE</span>STMONIALS</a></li>
+              <li><a href="#services"><span>S</span>ERVICES</a></li>
+              <li><a href="#webpages"><span>WEB</span>-PAGES</a></li>
+              <li><a href="#contactus"><span>CO</span>NTACT US</a></li>
+              <li><a href="#contactus"><span>CO</span>NTAC US</a></li>
+          </ul>
+
+        </header>
+         <body>
+          <!--  <h1><i class="fab fa-linode"></i> WELCOME TO <span>TEP SOFT</span> <br> THOKOZANI EDSON PETRO PAGE</h1>
+          -->
+             <section class="banner" id="banner">
+                 <div class="content">
+                 <h2>Always Choose Tepsoft</h2>
+                 <p>Tep soft is alws there for  you when you need it. If you want a website for your busieness, don't delay, come to TEP SOFT</p>
+                 <a href="#" class="btn">OUR ACTIVITIES</a>
+                </div>
+             </section>
+             <section class="about" id="about">
+                 <div class="row">
+                     <div class="cl50">
+                         <h2 class="titleText">About <span>TEP</span> SOFT</h2>
+                         <p>Tep soft is the best source of your business website. Thokozani Edson Petro is the founding directo of this company.It is located along Ntchisi Road at Mponela Trading center.
+                             <br><br>
+                             It has two main parts, the first part is that you can have your website to run online business and make lots of profits while the second part it that it develops software which can be used to run  and monitor your organisation.
+                         </p>
+                     </div>
+                    <div class="col50">
+                        <div class="imgBx">
+                            <img src="2.jpg">
+                        </div>
+                    </div>
+                    
+                 </div>
+             </section>
+                <section class="services" id="services">
+                    <div class="title">
+                        <h2 class="titleText"><span>TEPSOFT</span> SERVICES</h2>
+                        <p><strong><span>At Tep soft we provide you with all kind of bunsiness platforms you want.</span></strong>
+                            <br>
+                        
+                            1. Hotel Management Systems<br>
+                            2. Hospital Manangement Systems<br>
+                            3. School Management Systems<br>
+                            4. E-Commerce Systems<br>
+                            5. E-Business Systems<br>
+                            6. Music Management Systems<br>
+                            7. Plus any other websits to facilitate your industry
+                        
+                        </p>
+                    </div>
+                    <div class="content">
+                        <div class="box">
+                            <div class="imgBx">
+                               <img src="3.jpg"> 
+                            </div>
+                            <div class="text">
+                                <h3>Special Web pages </h3>
+                            </div>
+                        </div>
+                    <div class="box">
+                        <div class="imgBx">
+                           <img src="3.jpg"> 
+                        </div>
+                        <div class="text">
+                            <h3>Special Systems </h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgBx">
+                           <img src="3.jpg"> 
+                        </div>
+                        <div class="text">
+                            <h3>Special App </h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgBx">
+                           <img src="3.jpg"> 
+                        </div>
+                        <div class="text">
+                            <h3>Special online pages </h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgBx">
+                           <img src="3.jpg"> 
+                        </div>
+                        <div class="text">
+                            <h3>Special App </h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgBx">
+                           <img src="3.jpg"> 
+                        </div>
+                        <div class="text">
+                            <h3>Special App </h3>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="title">
+                        <a href="#" class="btn">View All</a>
+                </div>
+                </section>
+
+                 <section class="webpages" id="webpages">
+
+                   <div class="title">
+                       <h2 class="titleText"><span>TEPSOFT</span> WEB DEVELOPERS</h2>
+                       <p>We are the best and expert in web design and development.</p>
+                   </div>
+                   <div class="content">
+                       <div class="box">
+                           <div class="imgBx">
+                               <img src="g10.jpg">
+                           </div>
+                           <div class="text">
+                               <h3>The Hotel Management Systems</h3>
+                           </div>
+                       </div>
+
+                       <div class="box">
+                        <div class="imgBx">
+                            <img src="3.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>The School Management Systems</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="3.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>The Hospital Management Systems</h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="sounds.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>The Music Sites pages</h3>
+                        </div>
+                    </div>
+                   </div>
+
+
+                 </section>
+
+                 <section class="say" id="say">
+                     <div class="title white">
+                         <h2 class="titleText">They said About<span>TEP</span>SOFT</h2>
+                         <p>Tep Soft is the mother of software engineering.</p>
+                     </div>
+                     <div class="content">
+                         <div class="box">
+                             <div class="imgBx">
+                                 <img src="say1.jpg">
+                             </div>
+
+                             <div class="text">
+                                 <p>We always help where the help is needed, we offer all what you deserve at a right time.<br>
+                                We are the hub of the best software and websites to help you in running your business and sell online and make profits.</p>
+                             <h3>Some Famous  Projects</h3>
+                            </div>
+                         </div>
+
+                         <div class="box">
+                            <div class="imgBx">
+                                <img src="say2.jpg">
+                            </div>
+
+                            <div class="text">
+                                <p>We always help where the help is needed, we offer all what you deserve at a right time.<br>
+                               We are the hub of the best software and websites to help you in running your business and sell online and make profits.</p>
+                            <h3>Some Famous  Projects</h3>
+                           </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="say3.jpg">
+                            </div>
+
+                            <div class="text">
+                                <p>We always help where the help is needed, we offer all what you deserve at a right time.<br>
+                               We are the hub of the best software and websites to help you in running your business and sell online and make profits.</p>
+                            <h3>Some Famous  Projects</h3>
+                           </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="say4.jpg">
+                            </div>
+
+                            <div class="text">
+                                <p>We always help where the help is needed, we offer all what you deserve at a right time.<br>
+                               We are the hub of the best software and websites to help you in running your business and sell online and make profits.</p>
+                            <h3>Some Famous  Projects</h3>
+                           </div>
+                        </div>
+                     </div>
+                 </section>
+
+
+                 <section class="contactus" id="contactus">
+
+                    <div class="title">
+                        <h2 class="titleText">Contact <span>TEP</span> Soft</h2>
+                        <p>For more information about TEP SOFT limited, your can visit us.</p>
+                    </div>
+                    <div class="contactForm">
+                        <h3><strong> Send Message</strong></h3>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="inputBox">
+                            <textarea placeholder="Name"></textarea>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submitt" value="Send">
+                        </div>
+                    </div>
+                 </section>
+
+
+                 <div class="copyrightText">
+                     <p>&copysr;2022 || <a href="#">infor@tepsoft.ac.mw</a>  </p>
+                 </div>
+             <script type="text/javascript">
+                 window.addEventListener('scroll', function(){
+                     const header = document.querySelector('header');
+                     header.classList.toggle("sticky", window.scrollY >0);
+                 });
+             </script>
+         </body>
+         <footer>&copysr; @ tepsoft.com 2022</footer>
+</html>
